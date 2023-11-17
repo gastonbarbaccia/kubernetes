@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: appjava-deployment
+  labels:
+    app: appjava
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: appjava
+  template:
+    metadata:
+      labels:
+        app: appjava
+    spec:
+      containers:
+      - name: appjava
+        image: lucaseveron/appjava:v1.0
+        ports:
+        - containerPort: 80
