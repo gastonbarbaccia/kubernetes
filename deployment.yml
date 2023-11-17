@@ -18,4 +18,4 @@ spec:
       - name: appjava
         image: lucaseveron/appjava:v1.0
         ports:
-        - containerPort: 80
+        - containerPort: 8080
